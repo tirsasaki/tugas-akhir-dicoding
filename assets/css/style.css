@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@500;700&family=Roboto:wght@700;900&family=Ubuntu:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* margin: 0; */
+}
+
+header {
+  display: inline;
+  padding: 20px;
+  /* margin-bottom: 10px; */
+}
+
+header.navbar {
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+header.navbar .logo img {
+  width: 180px;
+}
+
+header.navbar .nav-list ul {
+  display: flex;
+  padding-left: 0;
+  gap: 2rem;
+}
+
+header.navbar .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar .nav-list li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #45e584;
+  padding: 0.5rem;
+  border-radius: 50px 20px;
+  transition: all 0.2 ease-in-out;
+}
+
+header.navbar .nav-list li a:hover {
+  background-color: #45e584;
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+main #content {
+  display: flex;
+  align-items: center;
+}
+
+main aside {
+  position: relative;
+}
+
+main .profile {
+  display: flex;
+}
+
+main .profile img {
+  width: 500px;
+}
+
+main #content button {
+  font-weight: bold;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  margin-right: 0.7rem;
+  background-color: #45e584;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 50px 20px;
+  cursor: pointer;
+  transition: all 0.2 ease-in;
+}
+
+main #content button:hover {
+  border: 3px solid #45e584;
+  border-radius: 50px 20px;
+  background-color: white;
+  color: black;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #45e584;
+  color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar {
+    flex-direction: column;
+  }
+  header.navbar .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  main #content {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+  main #content .content-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
